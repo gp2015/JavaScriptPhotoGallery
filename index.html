@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>peter koehler</title>
+  
+	<!-- Google Font -->
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	
+	<!-- jQuery Stylesheets -->
+	<!-- jQuery Mobile Stylesheet-->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+	<!-- jQuery UI Stylesheet-->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	
+    <!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<!-- jQuery UI -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	
+	<!-- jQuery Mobile -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+	
+	<!-- Touchwipe -->
+	<script src="jquery.touchwipe.min.js"></script>
+	
+	<!-- My jQuery -->
+	<script src="script.js"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+	
+	<!-- Only way IE styles will work -->
+	<!--[if !IE]><!-->
+	<style>
+		html{
+			overflow-x: hidden;
+		}
+
+		body{
+			font-family: 'Raleway', sans-serif;
+			margin-top: -20px;
+		}
+
+		.wrapper{
+			
+		}
+
+		#name {
+			text-align: center;
+			margin-bottom: -8px;
+		}
+
+		.left_arrow {
+			height: 600px;
+			width: 30px;
+			opacity: 0.2;
+			position: absolute;
+			left: 0;	
+			transition: opacity .5s ease-out;
+		}
+
+		.left_arrow:hover {
+			opacity: 0.6;
+		}
+
+		.right_arrow {
+			height: 600px;
+			width: 30px;
+			opacity: 0.2;
+			position: absolute;
+			right: 0;
+			transition: opacity .1s ease-out;
+		}
+
+		.right_arrow:hover {
+			opacity: 0.6;
+		}
+
+		#arrows {
+			margin-top: -16.7%;
+		}
+
+		.gallery {
+			width: 3608px;
+		}
+
+		img {
+			opacity: 0.4;
+		}
+
+		.slideshow img {
+			height: 600px;
+		}
+
+		.focus {
+			opacity: 1.0;
+		}
+
+		#footer {
+			position: static;
+			margin-top: 605px;
+			text-align: center;
+			width: 100%;
+		}
+	</style>
+	<!--<![endif]-->
+	
+    <!-- CSS - HAVE to be below IE <style> or else below stylesheets will not work -->
+	<!-- Reset Stylesheet -->
+    <link type="css/text" href="#.css" rel="stylesheet"/>
+	<link type="css/text" href="stylesheet.css" rel="stylesheet"/>
+	
+  </head>
+  <body>
+	<div class="wrapper">
+	  <div id="name">
+		<h1>peter koehler</h1>
+		<p>photographs worth &infin; words</p>
+	  </div>	  
+	  <div class="gallery">	
+		<div class="slideshow">
+		  <img class="focus" src="/koehlerimgs/1.jpg"
+			alt="Peter Koehler Photogaphy"/>
+			
+		  <img src="/koehlerimgs/2.jpg"
+			alt="Peter Koehler Photogaphy"/>
+			
+		  <img src="/koehlerimgs/3.jpg"
+			alt="Peter Koehler Photogaphy"/>
+			
+		  <img src="/koehlerimgs/4.jpg"
+			alt="Peter Koehler Photogaphy"/>
+		</div>
+	    <div id="arrows">
+		  <img class="left_arrow" src="/koehlerimgs/bar.png"
+			  alt="Left Navigation"/>
+		  <img class="right_arrow" src="/koehlerimgs/bar.png"
+			  alt="Right Navigation"/>
+	    </div>		
+	  </div>
+	</div>
+ 
+	<footer>
+	  <div id="footer">
+	    <p>305.942.4555</p>
+		<p>peterkc89@gmail.com</p>
+	  </div>
+	</footer>
+  </body>
+</html>

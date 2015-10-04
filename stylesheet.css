@@ -1,0 +1,161 @@
+html{
+    overflow-x: hidden;
+}
+
+body{
+	font-family: 'Raleway', sans-serif;
+}
+
+.wrapper{
+	
+}
+
+#name{
+	padding-top: 10px;
+	padding-bottom: 5px;
+	height: 10%;
+	text-align: center;
+}
+
+#name h1 {
+	font-size: 35px;
+}
+
+#name p {
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+
+.left_arrow {
+	height: 600px;
+	width: 30px;
+	opacity: 0.2;
+	position: absolute;
+	left: 0;
+    transition: opacity .5s ease-out;
+}
+
+.left_arrow:hover {
+	opacity: 0.6;
+}
+
+.right_arrow {
+	height: 600px;
+	width: 30px;
+	opacity: 0.2;
+	position: absolute;
+	right: 0;
+    transition: opacity .1s ease-out;
+}
+
+.right_arrow:hover {
+	opacity: 0.6;
+}
+
+#arrows {
+	position: absolute;
+}
+
+.gallery {
+	width: 3608px;
+}
+
+img {
+	opacity: 0.4;
+}
+
+.slideshow img {
+	height: 600px;
+}
+
+.focus {
+	opacity: 1.0;
+}
+
+#footer {
+	position: static;
+	margin-top: 605px;
+	text-align: center;
+	width: 100%;
+}
+
+/* iPhone 5 & 5s portrait */
+@media only screen 
+and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+	#name {
+		margin-top: 5px;
+	}
+	
+	#arrows {
+		display: none;
+	}
+	
+	.slideshow img {
+		width: auto;
+		height: 200px;
+	}
+	
+	#footer {
+		position: static;
+		margin-top: 0;
+		text-align: center;
+		width: 100%;
+	}
+}
+
+/* iPhone 5 & 5s landscape */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+	#arrows {
+		display: none;
+	}
+	
+	.slideshow img {
+		width: 480px;
+		height: auto;
+	}
+	
+	#footer {
+		position: static;
+		margin-top: 0;
+		text-align: center;
+		width: 100%;
+	}	
+}
+
+/* iPhone 6 landscape */
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+	#arrows {
+		display: none;
+	}
+	
+	.slideshow img {
+		width: 564px;
+		height: auto;
+	}
+	
+	#footer {
+		position: static;
+		margin-top: 0;
+		text-align: center;
+		width: 100%;
+	}	
+}
+
+/* iPhone 6 Plus landscape */
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : landscape) {
+	#arrows {
+		display: none;
+	}
+	
+	.slideshow img {
+		width: 622px;
+		height: auto;
+	}
+	
+	#footer {
+		position: static;
+		margin-top: 0;
+		text-align: center;
+		width: 100%;
+	}		
+}
