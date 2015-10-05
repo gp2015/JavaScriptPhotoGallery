@@ -3,8 +3,8 @@ $(document).ready(function(){
 	$("#left_arrow").click(function(){
 		var currentImg = $(".focus");
 		var prevImg = $(currentImg).prev();
-		if (prevImg.length == 0) {						return;		} 				if ($(currentImg).is(":first-child")) {						$(".gallery").css("margin-left", "0");			return;					} else {
-			$(".gallery").animate({marginLeft: "+=" + $(prevImg).width()}, 500);
+		if (prevImg.length == 0) {						return;					} else {
+			$(".gallery").animate({marginLeft: "+=" + $(prevImg).width()}, 250);
 			currentImg.removeClass("focus");
 			prevImg.addClass("focus");
 		}		
@@ -12,9 +12,8 @@ $(document).ready(function(){
 	// Next button
 	$("#right_arrow").click(function(){
 		var currentImg = $(".focus");
-		var nextImg = $(currentImg).next();				if (nextImg.length == 0) {			return;		}		
-		if ($(nextImg).is(":last-child")) {						$(".gallery").animate({marginLeft: "-6870"}, 500);			currentImg.removeClass("focus");			nextImg.addClass("focus");			return;					} else {
-			$(".gallery").animate({marginLeft: "-=" + $(currentImg).width()}, 500);
+		var nextImg = $(currentImg).next();				if (nextImg.length == 0) {			return;		} else {
+			$(".gallery").animate({marginLeft: "-=" + $(currentImg).width()}, 250);
 			currentImg.removeClass("focus");
 			nextImg.addClass("focus");
 		}		
@@ -27,7 +26,7 @@ $(document).ready(function(){
 		if (prevImg.length == 0){
 			return;
 		} else {
-			$(".gallery").css({marginLeft: "+=" + $(prevImg).width()});
+			$(".gallery").css({marginLeft: "+=" + $(prevImg).width()}, 250);
 			currentImg.removeClass("focus");
 			prevImg.addClass("focus");			}
     });	
@@ -38,7 +37,7 @@ $(document).ready(function(){
 		if (nextImg.length == 0){
 			return;
 		} else {
-			$(".gallery").css({marginLeft: "-=" + $(currentImg).width()});
+			$(".gallery").css({marginLeft: "-=" + $(currentImg).width()}, 250);
 			currentImg.removeClass("focus");
 			nextImg.addClass("focus");						
 		}
