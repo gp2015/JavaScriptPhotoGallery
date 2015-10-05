@@ -6,7 +6,7 @@ $(document).ready(function(){
 		
 		if (prevImg.length == 0){			return;
 		} else {
-			$(".gallery").animate({marginLeft: "+=" + $(currentImg).width()}, 500);
+			$(".gallery").animate({marginLeft: "+=" + $(currentImg).outerWidth()}, 500);
 			currentImg.removeClass("focus");
 			prevImg.addClass("focus");
 		}
@@ -20,7 +20,7 @@ $(document).ready(function(){
 		if (nextImg.length == 0){
 			return;
 		} else {
-			$(".gallery").animate({marginLeft: "-=" + $(currentImg).width()}, 500);
+			$(".gallery").animate({marginLeft: "-=" + $(nextImg).outerWidth()}, 500);
 			currentImg.removeClass("focus");
 			nextImg.addClass("focus");
 		}
@@ -34,7 +34,7 @@ $(document).ready(function(){
 		if (prevImg.length == 0){
 			return;
 		} else {
-			$(".gallery").animate({marginLeft: "+=" + $(currentImg).width()});
+			$(".gallery").css({marginLeft: "+=" + $(currentImg).width()});
 			currentImg.removeClass("focus");
 			prevImg.addClass("focus");			}
     });	
@@ -45,7 +45,7 @@ $(document).ready(function(){
 		if (nextImg.length == 0){
 			return;
 		} else {
-			$(".gallery").animate({marginLeft: "-=" + $(currentImg).width()});
+			$(".gallery").css({marginLeft: "-=" + $(nextImg).width()});
 			currentImg.removeClass("focus");
 			nextImg.addClass("focus");						
 		}
