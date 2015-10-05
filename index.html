@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
@@ -8,147 +8,167 @@
   
 	<!-- Google Font -->
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-	
-	<!-- jQuery Stylesheets -->
+  
+    <!-- JavaScript/jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
 	<!-- jQuery Mobile Stylesheet-->
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-	<!-- jQuery UI Stylesheet-->
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-	
-    <!-- jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	
-	<!-- jQuery UI -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	
 	<!-- jQuery Mobile -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-	
-	<!-- Touchwipe -->
-	<script src="jquery.touchwipe.min.js"></script>
 	
 	<!-- My jQuery -->
 	<script src="script.js"></script>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
 	
-	<!-- Only way IE styles will work -->
-	<!--[if !IE]><!-->
 	<style>
-		html{
+	
+		html {
 			overflow-x: hidden;
 		}
-
-		body{
+	
+		body {
 			font-family: 'Raleway', sans-serif;
-			margin-top: -20px;
 		}
-
-		.wrapper{
-			
-		}
-
+		
 		#name {
 			text-align: center;
-			margin-bottom: -8px;
+			width: 100%;
 		}
 
-		.left_arrow {
-			height: 600px;
+		#left_arrow {
+			height: 550px;
 			width: 30px;
 			opacity: 0.2;
 			position: absolute;
 			left: 0;	
 			transition: opacity .5s ease-out;
+			z-index: 1;
 		}
 
-		.left_arrow:hover {
+		#left_arrow:hover {
 			opacity: 0.6;
 		}
 
-		.right_arrow {
-			height: 600px;
+		#right_arrow {
+			height: 550px;
 			width: 30px;
 			opacity: 0.2;
 			position: absolute;
 			right: 0;
-			transition: opacity .1s ease-out;
+			transition: opacity .5s ease-out;
+			z-index: 1;
 		}
 
-		.right_arrow:hover {
+		#right_arrow:hover {
 			opacity: 0.6;
 		}
-
-		#arrows {
-			margin-top: -16.7%;
-		}
-
+		
 		.gallery {
-			width: 3608px;
+			width: 10000px;
+			margin: 0 auto;
 		}
-
+		
 		img {
 			opacity: 0.4;
 		}
-
-		.slideshow img {
-			height: 600px;
+		
+		.slideshow {
+	
 		}
-
+		
+		.slideshow img {
+			height: 550px;
+		}
+		
 		.focus {
 			opacity: 1.0;
 		}
-
+		
 		#footer {
-			position: static;
-			margin-top: 605px;
 			text-align: center;
 			width: 100%;
 		}
+		
+		@viewport {
+			zoom: 1.0;
+			width: device-width;
+		}
+		
+		/* iPhone 5 & 5s portrait */
+		@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+			#arrows {
+				display: none;
+			}
+			
+			.slideshow img {
+				width: auto;
+				height: 200px;
+			}
+		}
+		
+		/* iPhone 5 & 5s landscape */
+		@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+			#arrows {
+				display: none;
+			}
+		
+			.slideshow img {
+				width: auto;
+				height: 320px;
+			}
+		}
+		
+		/* iPhone 6 landscape */
+		@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+			#arrows {
+				display: none;
+			}	
+
+			.slideshow img {
+				width: 564px;
+				height: auto;
+			}
+		}
+		
+		/* iPhone 6 Plus landscape */
+		@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : landscape) {
+			#arrows {
+				display: none;
+			}
+			
+			.slideshow img {
+				width: 622px;
+				height: auto;
+			}
+		}
+		
 	</style>
-	<!--<![endif]-->
-	
-    <!-- CSS - HAVE to be below IE <style> or else below stylesheets will not work -->
-	<!-- Reset Stylesheet -->
-    <link type="css/text" href="#.css" rel="stylesheet"/>
-	<link type="css/text" href="stylesheet.css" rel="stylesheet"/>
-	
   </head>
   <body>
-	<div class="wrapper">
-	  <div id="name">
-		<h1>peter koehler</h1>
-		<p>photographs worth &infin; words</p>
-	  </div>	  
-	  <div class="gallery">	
-		<div class="slideshow">
-		  <img class="focus" src="/koehlerimgs/1.jpg"
-			alt="Peter Koehler Photogaphy"/>
-			
-		  <img src="/koehlerimgs/2.jpg"
-			alt="Peter Koehler Photogaphy"/>
-			
-		  <img src="/koehlerimgs/3.jpg"
-			alt="Peter Koehler Photogaphy"/>
-			
-		  <img src="/koehlerimgs/4.jpg"
-			alt="Peter Koehler Photogaphy"/>
-		</div>
-	    <div id="arrows">
-		  <img class="left_arrow" src="/koehlerimgs/bar.png"
-			  alt="Left Navigation"/>
-		  <img class="right_arrow" src="/koehlerimgs/bar.png"
-			  alt="Right Navigation"/>
-	    </div>		
+	<div id="wrapper">
+      <div id="name">
+        <h1>peter koehler</h1>
 	  </div>
-	</div>
- 
-	<footer>
+	  <div class="gallery">
+	    <div id="arrows">
+	      <img id="left_arrow" src="./imgs/bar.png" alt="Left Navigation"/>
+	      <img id="right_arrow" src="./imgs/bar.png" alt="Right Navigation"/>		
+	    </div>
+	    <div class="slideshow">
+	      <img class="focus" src="./imgs/1.jpg" alt="Peter Koehler Photography"/>
+		  <img src="./imgs/2.jpg" alt="Peter Koehler Photography"/>
+		  <img src="./imgs/3.jpg" alt="Peter Koehler Photography"/>
+		  <img src="./imgs/4.jpg" alt="Peter Koehler Photography"/>
+	    </div>
+	  </div>
 	  <div id="footer">
 	    <p>305.942.4555</p>
-		<p>peterkc89@gmail.com</p>
+	    <p>peterkc89@gmail.com</p>
 	  </div>
-	</footer>
+	</div>
   </body>
 </html>

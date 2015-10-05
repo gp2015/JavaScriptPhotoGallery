@@ -1,69 +1,53 @@
-// Stop middle button horizontal scroll
-var scrollEventHandler = function()
-{
-  window.scroll(0, window.pageYOffset)
-}
-
-window.addEventListener("scroll", scrollEventHandler, false);
-
-$(document).ready(function(){
-	
+$(document).ready(function(){
 	// Previous button
-	$(".left_arrow").click(function(){
+	$("#left_arrow").click(function(){
 		var currentImg = $(".focus");
 		var prevImg = $(currentImg).prev();
 		
-		if (prevImg.length == 0){
-			return;
+		if (prevImg.length == 0){			return;
 		} else {
-			$(".gallery").animate({marginLeft: "+=" + $(prevImg).outerWidth()}, 500);
+			$(".gallery").animate({marginLeft: "+=" + $(currentImg).width()}, 500);
 			currentImg.removeClass("focus");
 			prevImg.addClass("focus");
 		}
-	});
-	
+		console.log(prevImg);
+	});
 	// Next button
-	$(".right_arrow").click(function(){
+	$("#right_arrow").click(function(){
 		var currentImg = $(".focus");
 		var nextImg = $(currentImg).next();
 		
 		if (nextImg.length == 0){
 			return;
 		} else {
-			$(".gallery").animate({marginLeft: "-=" + $(nextImg).outerWidth()}, 500);
+			$(".gallery").animate({marginLeft: "-=" + $(currentImg).width()}, 500);
 			currentImg.removeClass("focus");
 			nextImg.addClass("focus");
 		}
-	});
-	
+		console.log(nextImg);
+	});
 	// Swipe events
 	// Swipe right, "Prev img"
     $(".slideshow").swiperight(function() {
 		var currentImg = $(".focus");
-		var prevImg = $(currentImg).prev();
-		
+		var prevImg = $(currentImg).prev();
 		if (prevImg.length == 0){
 			return;
 		} else {
-			$(".gallery").animate({marginLeft: "+=" + currentImg.width()});
+			$(".gallery").animate({marginLeft: "+=" + $(currentImg).width()});
 			currentImg.removeClass("focus");
-			prevImg.addClass("focus");	
-			
-		}
-    });	
-	
+			prevImg.addClass("focus");			}
+    });	
 	// Swipe left, "Next img"
     $(".slideshow").swipeleft(function() {
 		var currentImg = $(".focus");
-		var nextImg = $(currentImg).next();
-		
+		var nextImg = $(currentImg).next();
 		if (nextImg.length == 0){
 			return;
 		} else {
-			$(".gallery").animate({marginLeft: "-=" + currentImg.width()});
+			$(".gallery").animate({marginLeft: "-=" + $(currentImg).width()});
 			currentImg.removeClass("focus");
 			nextImg.addClass("focus");						
-		}		
+		}
     });
-});
-
+});
