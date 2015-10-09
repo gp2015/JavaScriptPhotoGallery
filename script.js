@@ -9,15 +9,20 @@ $(document).ready(function(){
 			prevImg.addClass("focus");
 		}		
 	});
+	
 	// Next button
 	$("#right_arrow").click(function(){
 		var currentImg = $(".focus");
-		var nextImg = $(currentImg).next();				if (nextImg.length == 0) {			return;		} else {
+		var nextImg = currentImg.next();		
+		if (nextImg.length == 0) {			
+			return;		
+		} else {
 			$(".gallery").animate({marginLeft: "-=" + $(currentImg).width()}, 250);
 			currentImg.removeClass("focus");
 			nextImg.addClass("focus");
 		}		
 	});
+	
 	// Swipe events
 	// Swipe right, "Prev img"
     $(".slideshow").swiperight(function() {
@@ -26,7 +31,7 @@ $(document).ready(function(){
 		if (prevImg.length == 0){
 			return;
 		} else {
-			$(".gallery").css({marginLeft: "+=" + $(prevImg).width()}, 250);
+			$(".gallery").css({marginLeft: "+=" + $(prevImg).outerWidth()}, 250);
 			currentImg.removeClass("focus");
 			prevImg.addClass("focus");			}
     });	

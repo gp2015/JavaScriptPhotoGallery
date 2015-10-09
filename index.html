@@ -9,7 +9,7 @@
 	<!-- Google Font -->
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   
-    <!-- JavaScript/jQuery -->
+    <!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 	<!-- jQuery Mobile Stylesheet-->
@@ -19,7 +19,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 	
 	<!-- My jQuery -->
-	<script src="script.js"></script>
+	<script src="script.js" type="text/javascript"></script>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
@@ -32,6 +32,11 @@
 	
 		body {
 			font-family: 'Raleway', sans-serif;
+		}
+		
+		#wrapper {
+			padding-top: 1%;
+			padding-bottom: 2%;
 		}
 		
 		#name {
@@ -74,16 +79,17 @@
 		
 		img {
 			opacity: 0.4;
-
 		}
 		
 		.slideshow {
-	
+
 		}
 		
 		.slideshow img {
 			height: 550px;
 			width: auto;
+			float: left;
+			margin-bottom: 20px;
 		}
 		
 		.focus {
@@ -93,6 +99,7 @@
 		#footer {
 			text-align: center;
 			width: 100%;
+			clear: both;
 		}
 		
 		@viewport {
@@ -102,6 +109,11 @@
 		
 		/* iPhone 5 & 5s portrait */
 		@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+			#wrapper {
+				padding-top: 10%;
+				padding-bottom: 10%;
+			}
+			
 			#arrows {
 				display: none;
 			}
@@ -120,7 +132,24 @@
 		
 			.slideshow img {
 				width: auto;
-				height: 320px;
+				height: 300px;
+			}
+		}
+		
+		/* iPhone 6 portrait */
+		@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+			#wrapper {
+				padding-top: 10%;
+				padding-bottom: 10%;
+			}
+			
+			#arrows {
+				display: none;
+			}			
+
+			.slideshow img {
+				width: auto;
+				height: 230px;
 			}
 		}
 		
@@ -131,8 +160,25 @@
 			}	
 
 			.slideshow img {
-				width: 564px;
-				height: auto;
+				width: auto;
+				height: 300px;
+			}
+		}
+
+		/* iPhone 6 Plus portrait */
+		@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) {
+			#wrapper {
+				padding-top: 30%;
+				padding-bottom: 30%;
+			}
+			
+			#arrows {
+				display: none;
+			}
+
+			.slideshow img {
+				width: auto;
+				height: 250px;
 			}
 		}
 		
@@ -143,14 +189,14 @@
 			}
 			
 			.slideshow img {
-				width: 622px;
-				height: auto;
+				width: auto;
+				height: 300px;
 			}
 		}
 		
 	</style>
   </head>
-  <body>
+  <body onorientationchange="updateOrientation;">
 	<div id="wrapper">
       <div id="name">
         <h1>peter koehler</h1>
@@ -160,7 +206,12 @@
 	      <img id="left_arrow" src="bar.png" alt="Left Navigation"/>
 	      <img id="right_arrow" src="bar.png" alt="Right Navigation"/>		
 	    </div>
-	    <div class="slideshow">		  <img class="focus" src="./gallery/frontpage/1.jpg" alt="Peter Koehler Photography"/>		  		  <img src="./gallery/frontpage/2.jpg" alt="Peter Koehler Photography"/>		  		  <img src="./gallery/frontpage/3.jpg" alt="Peter Koehler Photography"/>		  		  <img src="./gallery/frontpage/4.jpg" alt="Peter Koehler Photography"/>		  		  <img src="./gallery/frontpage/5.jpg" alt="Peter Koehler Photography"/>		
+	    <div class="slideshow">		  
+		  <img class="focus" src="./gallery/frontpage/1.jpg" alt="Peter Koehler Photography"/>		  		  
+		  <img src="./gallery/frontpage/2.jpg" alt="Peter Koehler Photography"/>		  		  
+		  <img src="./gallery/frontpage/3.jpg" alt="Peter Koehler Photography"/>		  		  
+		  <img src="./gallery/frontpage/4.jpg" alt="Peter Koehler Photography"/>		  		  
+		  <img src="./gallery/frontpage/5.jpg" alt="Peter Koehler Photography"/>		
 		  <img src="./gallery/frontpage/img (1).jpg" alt="Peter Koehler Photography"/>
 		  <img src="./gallery/frontpage/img (2).jpg" alt="Peter Koehler Photography"/>
 		  <img src="./gallery/frontpage/img (3).jpg" alt="Peter Koehler Photography"/>
@@ -175,4 +226,7 @@
 	  </div>
 	</div>
   </body>
+  <script type="text/javascript"> // RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES  
+    window.onorientationchange = function() { window.location.reload(); };
+  </script>
 </html>
