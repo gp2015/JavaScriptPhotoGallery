@@ -1,166 +1,170 @@
-* {
-	font-family: 'Raleway', sans-serif;
-}
-
-body {
-	overflow-x: hidden;
-}
-		
-#wrapper {
-	
-}
-		
-#name {
-	text-align: center;
-	width: 100%;
-}
-
-#left_arrow {
-	height: 550px;
-	width: 30px;
-	opacity: 0.2;
-	position: absolute;
-	left: 0;	
-	transition: opacity .5s ease-out;
-	z-index: 1;
-}
-
-#left_arrow:hover {
-	opacity: 0.6;
-}
-
-#right_arrow {
-	height: 550px;
-	width: 30px;
-	opacity: 0.2;
-	position: absolute;
-	right: 0;
-	transition: opacity .5s ease-out;
-	z-index: 1;
-}
-
-#right_arrow:hover {
-	opacity: 0.6;
-}
-		
-.gallery {
-	width: 100000px;
-	margin: 0 auto;
-}
-		
-img {
-	opacity: 0.4;
-}
-		
-.slideshow img {
-	height: 550px;
-	width: auto;
-	float: left;
-	margin-bottom: 10px;
-}
-		
-.focus {
-	opacity: 1.0;
-}
-		
-#footer {
-	text-align: center;
-	width: 100%;
-	clear: both;
-}
-
-#footer a {
-	text-decoration: none;
-}
-
-@viewport {
-	zoom: 1.0;
-	width: device-width;
-}
-		
-/* iPhone 5 & 5s portrait */
-@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
-	#wrapper {
-		padding-top: 10%;
-		padding-bottom: 10%;
-	}
-			
-	#arrows {
-		display: none;
-	}
-	
-	.slideshow img {
-		width: auto;
-		height: 200px;
-	}
-}
-		
-/* iPhone 5 & 5s landscape */
-@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
-	#arrows {
-		display: none;
-	}
-		
-	.slideshow img {
-		width: auto;
-		height: 300px;
-	}
-}
-		
-/* iPhone 6 portrait */
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
-	#wrapper {
-		padding-top: 10%;
-		padding-bottom: 10%;
-	}
-	
-	#arrows {
-		display: none;
-	}			
-
-	.slideshow img {
-		width: auto;
-		height: 230px;
-	}
-}
-		
-/* iPhone 6 landscape */
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
-	#arrows {
-		display: none;
-	}	
-
-	.slideshow img {
-		width: auto;
-		height: 300px;
-	}
-}
-
-/* iPhone 6 Plus portrait */
-@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) {
-	#wrapper {
-		padding-top: 30%;
-		padding-bottom: 30%;
-	}
-			
-	#arrows {
-		display: none;
-	}
-
-	.slideshow img {
-		width: auto;
-		height: 250px;
-	}
-}
-		
-/* iPhone 6 Plus landscape */
-@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : landscape) {
-	#arrows {
-		display: none;
-	}
-			
-	.slideshow img {
-		width: auto;
-		height: 300px;
-	}
+* {
+	font-family: 'Raleway', sans-serif;
+}
+
+body {
+	overflow-x: hidden;
+}
+		
+#wrapper {
+	
+}
+		
+#name {
+	text-align: center;
+	width: 100%;
+}
+
+#left_arrow {
+	height: 550px;
+	width: 30px;
+	opacity: 0.2;
+	position: absolute;
+	left: 0;	
+	transition: opacity .5s ease-out;
+	z-index: 1;
+}
+
+#left_arrow:hover {
+	opacity: 0.6;
+}
+
+#right_arrow {
+	height: 550px;
+	width: 30px;
+	opacity: 0.2;
+	position: absolute;
+	right: 0;
+	transition: opacity .5s ease-out;
+	z-index: 1;
+}
+
+#right_arrow:hover {
+	opacity: 0.6;
+}
+		
+.gallery {
+	width: 100000px;
+	margin: 0 auto;
+    margin-top: 5%;
+}
+		
+img {
+	opacity: 0.4;
+}
+		
+.slideshow img {
+	height: 550px;
+	width: auto;
+	float: left;
+	margin-bottom: 10px;
+}
+		
+.focus {
+	opacity: 1.0;
+}
+		
+#footer {
+    position: relative;
+    top: 50px;
+	text-align: center;
+	width: 100%;
+	clear: both;
+    margin-bottom: 15px;
+}
+
+#footer a {
+	text-decoration: none;
+}
+
+@viewport {
+	zoom: 1.0;
+	width: device-width;
+}
+		
+/* iPhone 5 & 5s portrait */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+	#wrapper {
+		padding-top: 10%;
+		padding-bottom: 10%;
+	}
+			
+	#arrows {
+		display: none;
+	}
+	
+	.slideshow img {
+		width: auto;
+		height: 200px;
+	}
+}
+		
+/* iPhone 5 & 5s landscape */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+	#arrows {
+		display: none;
+	}
+		
+	.slideshow img {
+		width: auto;
+		height: 300px;
+	}
+}
+		
+/* iPhone 6 portrait */
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+	#wrapper {
+		padding-top: 10%;
+		padding-bottom: 10%;
+	}
+	
+	#arrows {
+		display: none;
+	}			
+
+	.slideshow img {
+		width: auto;
+		height: 230px;
+	}
+}
+		
+/* iPhone 6 landscape */
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+	#arrows {
+		display: none;
+	}	
+
+	.slideshow img {
+		width: auto;
+		height: 300px;
+	}
+}
+
+/* iPhone 6 Plus portrait */
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) {
+	#wrapper {
+		padding-top: 30%;
+		padding-bottom: 30%;
+	}
+			
+	#arrows {
+		display: none;
+	}
+
+	.slideshow img {
+		width: auto;
+		height: 250px;
+	}
+}
+		
+/* iPhone 6 Plus landscape */
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : landscape) {
+	#arrows {
+		display: none;
+	}
+			
+	.slideshow img {
+		width: auto;
+		height: 300px;
+	}
 }
